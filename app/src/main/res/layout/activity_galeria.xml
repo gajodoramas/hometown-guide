@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutGaleria"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/malva_mas_flojo"
+    tools:context=".Galeria">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/botonAnterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="50"
+                android:minLines="2"
+                android:text="Blablabla"
+                android:textColor="@color/malva_fuerte"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/malva_fuerte"
+        android:drawableLeft="@drawable/ic_round_menu_open_24"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonAnterior" />
+
+    <Button
+        android:id="@+id/botonAnterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/malva_fuerte"
+        android:drawableLeft="@drawable/ic_round_keyboard_arrow_left_24"
+        android:text="Anterior"
+        app:layout_constraintBottom_toTopOf="@+id/botonVolver"
+        app:layout_constraintEnd_toStartOf="@+id/botonSiguiente"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:lines="2"
+        android:maxLines="3"
+        android:minLines="2"
+        android:text="Avenida Los Menceyes"
+        android:textColor="@color/malva_fuerte"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagen" />
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="330dp"
+        android:layout_height="223dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avenida" />
+
+    <Button
+        android:id="@+id/botonSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/malva_fuerte"
+        android:drawableRight="@drawable/ic_round_navigate_next_24"
+        android:text="Siguiente"
+        app:layout_constraintBottom_toBottomOf="@+id/botonAnterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonAnterior"
+        app:layout_constraintTop_toTopOf="@+id/botonAnterior" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

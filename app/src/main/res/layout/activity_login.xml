@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/malva_mas_flojo"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="306dp"
+        android:layout_height="283dp"
+        app:layout_constraintBottom_toTopOf="@+id/userField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario" />
+
+    <EditText
+        android:id="@+id/userField"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/malva_fuerte"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Usuario"
+        android:inputType="textPersonName"
+        android:textColor="@color/malva_fuerte"
+        android:textColorHint="@color/malva_flojo"
+        app:layout_constraintBottom_toTopOf="@+id/passField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+    <EditText
+        android:id="@+id/passField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/malva_fuerte"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Contraseña"
+        android:inputType="textPersonName"
+        android:password="true"
+        android:textColor="@color/malva_fuerte"
+        android:textColorHint="@color/malva_flojo"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userField" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/malva_fuerte"
+        android:text="Acceder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passField" />
+</androidx.constraintlayout.widget.ConstraintLayout>

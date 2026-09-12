@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutWelcome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/malva_mas_flojo"
+    tools:context=".Welcome">
+
+    <Button
+        android:id="@+id/botonGaleria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/malva_fuerte"
+        android:drawableLeft="@drawable/ic_round_image_24"
+        android:text="Galería"
+        app:layout_constraintBottom_toTopOf="@+id/botonMapaTurista"
+        app:layout_constraintEnd_toStartOf="@+id/botonLugares"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lacuesta" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        android:fadeScrollbars="true"
+        android:scrollIndicators="none"
+        android:scrollbarDefaultDelayBeforeFade="200"
+        android:scrollbarFadeDuration="100"
+        android:scrollbarSize="2dp"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintBottom_toTopOf="@+id/botonGaleria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TextView"
+                android:textColor="@color/malva_fuerte" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/botonLugares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/malva_fuerte"
+        android:drawableLeft="@drawable/ic_round_location_on_24"
+        android:text="Lugares"
+        app:layout_constraintBottom_toBottomOf="@+id/botonGaleria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/botonGaleria"
+        app:layout_constraintTop_toTopOf="@+id/botonGaleria" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:text="La Cuesta de Arguijón"
+        android:textAlignment="gravity"
+        android:textColor="@color/malva_fuerte"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/botonMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/malva_mas_flojo"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_round_music_off_24" />
+
+    <Button
+        android:id="@+id/botonMapaTurista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/malva_fuerte"
+        android:text="Mapa del turista"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGaleria" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

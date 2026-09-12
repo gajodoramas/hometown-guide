@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hometown Guide</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_mapa_turista">MapaTurista</string>
+</resources>
